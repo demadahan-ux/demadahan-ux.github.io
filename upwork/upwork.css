@@ -1,0 +1,18 @@
+/* Upwork portfolio: same Charcoal & Sage system, one contact destination. */
+.hero-actions{flex-wrap:wrap}
+.upwork-contact{padding:78px 0 52px}
+.upwork-contact-heading{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end}
+.upwork-contact-heading h2{font-size:clamp(32px,4vw,48px);line-height:1.15;letter-spacing:-.045em;margin:20px 0 0}
+.upwork-contact-heading>p{max-width:460px;font-size:15px;line-height:1.9;color:#e1e9df;margin:0 0 4px}
+.upwork-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:43px}
+.upwork-option{display:flex;flex-direction:column;align-items:flex-start;padding:29px;background:rgba(255,255,255,.055);border:1px solid #627768;border-radius:6px;min-width:0}
+.upwork-option-number{font-size:10px;letter-spacing:.11em;color:#c9d8c4}
+.upwork-option h3{color:#fff;font-size:23px;line-height:1.25;margin:24px 0 16px}
+.upwork-option>p{font-size:13px;line-height:1.9;color:#e1e9df;margin:0 0 25px}
+.upwork-option-link{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;margin-top:auto;padding-top:19px;border-top:1px solid #627768;font-size:12px;line-height:1.5;color:#fff;text-decoration:none}
+.upwork-option-link:hover{text-decoration:underline;text-underline-offset:5px;color:#d9ead2}
+.upwork-option-link:focus-visible{outline:2px solid #d9ead2;outline-offset:6px}
+.upwork-contact-note{font-size:11px;line-height:1.8;color:#d0ddcb;margin:23px 0 0}
+@media(max-width:900px){.upwork-contact-heading{gap:35px}.upwork-options{gap:14px}.upwork-option{padding:23px}.upwork-option h3{font-size:21px}}
+@media(max-width:650px){.upwork-contact{padding:46px 0 37px}.upwork-contact-heading{grid-template-columns:1fr;gap:24px}.upwork-contact-heading>p{font-size:14px}.upwork-options{grid-template-columns:1fr;margin-top:28px;gap:16px}.upwork-option{padding:25px}.upwork-option h3{font-size:24px;margin-top:19px}.upwork-option>p{font-size:14px}.upwork-option-link{font-size:13px;min-height:44px}.upwork-contact-note{font-size:11px}}
+@media print{.upwork-contact-heading>p,.upwork-option>p,.upwork-option h3,.upwork-option-number,.upwork-option-link,.upwork-contact-note{color:#222}.upwork-option{break-inside:avoid}}

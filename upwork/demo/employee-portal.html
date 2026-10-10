@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f1f5fa">
+  <meta name="description" content="Explore Demarie Moyo’s employee portal concept through a public, interactive demo with fictional records, scorecards, a leave calendar, and CSV import and export.">
+  <title>Employee Portal Demo | Demarie Moyo</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="demo.css">
+  <script type="module" src="demo.mjs"></script>
+<link rel="canonical" href="https://demadahan-ux.github.io/upwork/demo/employee-portal.html"><meta property="og:url" content="https://demadahan-ux.github.io/upwork/demo/employee-portal.html"><meta name="robots" content="noindex,follow"></head>
+<body>
+  <a class="skip" href="#main">Skip to dashboard</a>
+  <div class="portfolio-bar"><a href="../employee-portal.html">← Back to case study</a><span>Portfolio demo <span class="dot">·</span> Fictional data</span><a class="upwork-demo-link" href="https://www.upwork.com/freelancers/~019e5cc22eaa83d6d4" target="_blank" rel="noopener noreferrer">Work with me on Upwork ↗<span class="sr-only"> (opens Upwork in a new tab)</span></a></div>
+  <div class="app-shell">
+    <header class="portal-header"><a class="portal-brand" href="#dashboard"><span class="brand-icon" aria-hidden="true">ep<span>.</span></span><span>Employee Portal<small>A connected view of team operations</small></span></a><div class="profile"><span class="avatar" aria-hidden="true">PV</span><span>Portfolio visitor<small>Demo workspace</small></span></div></header>
+    <nav class="tabs" aria-label="Portal views" role="tablist">
+      <button id="tab-dashboard" type="button" role="tab" aria-selected="true" aria-controls="dashboard" tabindex="0"><span aria-hidden="true">▦</span> Dashboard</button>
+      <button id="tab-scorecard" type="button" role="tab" aria-selected="false" aria-controls="scorecard" tabindex="-1"><span aria-hidden="true">▥</span> Scorecard</button>
+      <button id="tab-employees" type="button" role="tab" aria-selected="false" aria-controls="employees" tabindex="-1"><span aria-hidden="true">◉</span> Employees</button>
+      <button id="tab-leave" type="button" role="tab" aria-selected="false" aria-controls="leave" tabindex="-1"><span aria-hidden="true">▤</span> Leave calendar</button>
+    </nav>
+    <main id="main">
+      <div class="demo-notice"><span class="notice-icon" aria-hidden="true">i</span><p>Explore a simplified version of my employee dashboard. All records are fictional. Changes stay in this session; this demo does not connect to live Google Sheets.</p></div>
+      <noscript><p class="demo-notice">Enable JavaScript to use the interactive demo. You can also <a href="../employee-portal.html">read the case study</a>.</p></noscript>
+      <section id="dashboard" class="view" role="tabpanel" aria-labelledby="tab-dashboard" tabindex="0">
+        <div class="view-heading"><div><p class="eyebrow">TEAM OPERATIONS</p><h1>Good work starts with a clear view.</h1><p>Your sample team, at a glance.</p></div><span class="period">October 2026 <span>Sample period</span></span></div>
+        <div class="metrics">
+          <article class="metric primary-metric"><p>Employee records</p><strong id="employee-count">12</strong><span id="active-count">11 active members</span><div class="metric-motif" aria-hidden="true">◎</div></article>
+          <article class="metric"><p>Average quality</p><strong id="quality-metric">—</strong><span>Sample scorecards</span></article>
+          <article class="metric"><p>Active listening</p><strong id="listening-metric">—</strong><span>Sample scorecards</span></article>
+          <article class="metric"><p>Attendance</p><strong id="attendance-metric">—</strong><span>Sample scorecards</span></article>
+        </div>
+        <div class="dashboard-grid">
+          <article class="panel performance-panel"><div class="panel-title"><div><p class="eyebrow">PERFORMANCE SNAPSHOT</p><h2>A view across the team</h2></div><button class="text-button" type="button" data-go="scorecard">View scorecards →</button></div><div id="performance-bars" class="performance-bars"></div><p class="panel-footnote">Illustrative October averages. These are sample values, not actual employee results.</p></article>
+          <article class="panel"><div class="panel-title"><div><p class="eyebrow">WHAT’S NEW</p><h2>Announcements</h2></div><span class="count-pill">2</span></div><div class="announcement"><span class="announcement-date">OCT 05</span><h3>October scorecards are ready</h3><p>Try the team and month filters to explore the sample performance records.</p><button class="text-button" type="button" data-go="scorecard">Review scorecards →</button></div><div class="announcement"><span class="announcement-date">OCT 01</span><h3>Plan the month ahead</h3><p>Open the leave calendar to see the sample team’s upcoming time off.</p><button class="text-button" type="button" data-go="leave">Open calendar →</button></div></article>
+        </div>
+        <div class="quick-start"><div><span class="quick-icon" aria-hidden="true">↥</span><div><h2>Try a spreadsheet workflow</h2><p>Download a sample CSV, import it, then export the employee view.</p></div></div><button class="button" type="button" data-go="employees">Explore employee data →</button></div>
+      </section>
+      <section id="scorecard" class="view" role="tabpanel" aria-labelledby="tab-scorecard" tabindex="0" hidden>
+        <div class="view-heading"><div><p class="eyebrow">PERFORMANCE</p><h1>Scorecards</h1><p>Find the relevant record. See the bigger picture.</p></div><button type="button" id="export-scores" class="button">Download view ↓</button></div>
+        <div class="panel table-panel"><div class="filters"><label>Month<select id="score-month"><option value="10">October 2026</option><option value="9">September 2026</option></select></label><label>Team<select id="score-team"><option value="all">All teams</option><option>Orchid</option><option>Maple</option><option>Cedar</option></select></label><label class="search-field">Find an agent<input id="score-search" type="search" placeholder="Search by name or ID"></label><label class="check-label"><input type="checkbox" id="top-five"> Top 5 only</label></div><div class="table-meta"><span id="score-count" role="status" aria-live="polite"></span><span>Ranked by overall score</span></div><div class="table-scroll" tabindex="0" aria-label="Scorecards, scroll horizontally for all columns"><table><caption class="sr-only">Fictional employee performance scorecards</caption><thead><tr><th scope="col">Rank</th><th scope="col">Employee</th><th scope="col">Team</th><th scope="col">Overall</th><th scope="col">Quality</th><th scope="col">Listening</th><th scope="col">Attendance</th><th scope="col">Save rate</th></tr></thead><tbody id="score-rows"></tbody></table></div></div>
+        <p class="below-note">The overall score in this demo is the average of quality, active listening, and attendance. The original application’s scoring logic is not reproduced.</p>
+      </section>
+      <section id="employees" class="view" role="tabpanel" aria-labelledby="tab-employees" tabindex="0" hidden>
+        <div class="view-heading"><div><p class="eyebrow">PEOPLE & RECORDS</p><h1>Employee directory</h1><p>A central place to find and work with team information.</p></div><div class="button-group"><button type="button" id="download-sample" class="button secondary">Sample CSV ↓</button><button type="button" id="import-trigger" class="button">Import CSV ↑</button><input id="import-file" class="sr-only" type="file" accept=".csv,text/csv" tabindex="-1" aria-label="Import a sample employee CSV"></div></div>
+        <div class="import-help"><p><strong>Try it:</strong> download the sample CSV, then import it here. Import replaces this demo’s employee list for the current session.</p><button type="button" class="text-button" id="reset-data">Reset sample data ↺</button></div>
+        <p id="import-status" class="import-status" role="status" aria-live="polite"></p>
+        <div class="panel table-panel"><div class="filters"><label class="search-field">Find an employee<input id="employee-search" type="search" placeholder="Search name or employee ID"></label><label>Team<select id="employee-team"><option value="all">All teams</option><option>Orchid</option><option>Maple</option><option>Cedar</option></select></label><label>Status<select id="employee-status"><option value="all">All statuses</option><option>Active</option><option>On leave</option></select></label><button type="button" id="export-employees" class="button secondary export-button">Export view ↓</button></div><div class="table-meta"><span id="directory-count" role="status" aria-live="polite"></span><span>Fictional employee records</span></div><div class="table-scroll" tabindex="0" aria-label="Employees, scroll horizontally for all columns"><table><caption class="sr-only">Fictional employee directory</caption><thead><tr><th scope="col">Employee</th><th scope="col">Team</th><th scope="col">Role</th><th scope="col">Status</th></tr></thead><tbody id="employee-rows"></tbody></table></div></div>
+        <p class="below-note">CSV columns: id, name, team, role, status. Use sample records only. Maximum 500 rows and 100 KB; values are displayed as text.</p>
+      </section>
+      <section id="leave" class="view" role="tabpanel" aria-labelledby="tab-leave" tabindex="0" hidden>
+        <div class="view-heading"><div><p class="eyebrow">TEAM PLANNING</p><h1>Leave calendar</h1><p>See approved time off and plan team coverage.</p></div><span class="calendar-key"><i></i> Approved sample leave</span></div>
+        <div class="calendar-layout"><div class="panel calendar-panel"><div class="calendar-controls"><button type="button" id="previous-month" class="square-button" aria-label="Previous month">←</button><h2 id="calendar-month" aria-live="polite">October 2026</h2><button type="button" id="next-month" class="square-button" aria-label="Next month">→</button><button type="button" id="sample-month" class="text-button">Sample month</button></div><div class="calendar-scroll"><div class="calendar-weekdays" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div><div id="calendar-days" class="calendar-days" aria-label="Monthly leave calendar"></div></div></div><aside class="panel leave-list-panel"><p class="eyebrow">THIS MONTH</p><h2>Scheduled leave</h2><ul id="leave-list" class="leave-list"></ul><p class="panel-footnote">This demo shows approved leave only. The original portal also includes request-management views.</p></aside></div>
+      </section>
+    </main>
+    <footer><span>Designed & built by <a href="../index.html">Demarie Moyo</a></span><a href="../employee-portal.html">About the original project ↗</a></footer>
+  </div>
+</body>
+</html>
