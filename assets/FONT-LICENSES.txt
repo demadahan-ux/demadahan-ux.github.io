@@ -1,0 +1,19 @@
+Rubik-Regular.ttf
+Copyright (c) 2015 by Hubert & Fischer. All rights reserved. Hebrew characters (c) 2016 by Meir Sadan.
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL
+http://scripts.sil.org/OFL
+
+Rubik-Bold.ttf
+Copyright (c) 2015 by Hubert & Fischer. All rights reserved. Hebrew characters (c) 2016 by Meir Sadan.
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL
+http://scripts.sil.org/OFL
+
+NotoSerif-Regular.ttf
+Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic)
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL
+https://scripts.sil.org/OFL
+
+NotoSerif-Italic.ttf
+Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic)
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL
+https://scripts.sil.org/OFL
